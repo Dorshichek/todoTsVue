@@ -1,0 +1,38 @@
+.task-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.task-form__text {
+  border: 1px solid lightseagreen;
+  font-size: 20px;
+  color: black;
+  padding: 15px;
+  resize: none;
+}
+.task-form__text::placeholder {
+  font-size: 20px;
+  color: #2c3e50;
+}
+.task-form__text:focus {
+  border: 1px solid red;
+}
+.task-form__select {
+  font-size: 16px;
+  width: 50%;
+  text-align: center;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+.task-form__create {
+  color: white;
+  background-color: lightseagreen;
+  padding: 10px 15px;
+  width: 20%;
+  border-radius: 15px;
+}
+
+/*# sourceMappingURL=task-form.css.map */

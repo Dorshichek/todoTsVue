@@ -1,0 +1,22 @@
+.task-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  &__select {
+      font-size: 16px;
+      text-align: center;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+  }
+
+  &__create {
+    color: white;
+    background-color: lightseagreen;
+    padding: 10px 15px;
+    border-radius: 15px;
+  }
+}

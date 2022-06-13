@@ -1,0 +1,34 @@
+<template>
+  <li class="task-item">
+    <input class="task-item__checkbox" type="checkbox">
+    <div class="task-item__text">
+      <span class="task-item__title">{{ task.title }}</span>
+      <p class="task-item__description">{{ task.text }}</p>
+    </div>
+    <div class="task-item__aside">
+      <span class="task-item__priority">{{ task.priority }}</span>
+      <MyButton type="button">
+        Удалить
+      </MyButton>
+    </div>
+  </li>
+</template>
+
+<script>
+import {defineComponent} from 'vue';
+import MyButton from "@/components/Ui/MyButton";
+
+export default defineComponent({
+  name: "TaskItem",
+  components: {MyButton},
+  props: {
+    task: {
+      type: Object,
+    }
+  }
+})
+</script>
+
+<style scoped>
+
+</style>
