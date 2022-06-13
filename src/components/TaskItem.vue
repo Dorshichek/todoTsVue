@@ -7,7 +7,7 @@
     </div>
     <div class="task-item__aside">
       <span class="task-item__priority">{{ task.priority }}</span>
-      <MyButton type="button">
+      <MyButton type="button" @click="$emit('removeTask', task)">
         Удалить
       </MyButton>
     </div>
@@ -25,7 +25,7 @@ export default defineComponent({
     task: {
       type: Object,
     }
-  }
+  },
 })
 </script>
 

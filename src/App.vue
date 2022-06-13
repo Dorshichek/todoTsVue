@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <TaskForm @createPost="addPost"/>
-    <TaskList :tasks="tasks"/>
+    <TaskForm @createPost="addTask"/>
+    <TaskList :tasks="tasks" @removeTask="removeTask"/>
   </div>
 </template>
 
@@ -25,10 +25,14 @@ export default defineComponent({
     }
   },
   methods: {
-    addPost(newPost: IPost): void {
-      this.tasks.push(newPost)
+    addTask(newTask: IPost): void {
+      this.tasks.push(newTask)
+    },
+    removeTask(task: IPost) {
+      this.tasks = this.tasks.filter((t) => t.id !== task.id)
     }
-  }
+  },
+
 });
 </script>
 

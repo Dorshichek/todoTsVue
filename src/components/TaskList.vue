@@ -1,6 +1,6 @@
 <template>
   <ul v-if="tasks.length > 0" class="task-list">
-    <TaskItem v-for="task in tasks" :key="task.id" :task="task"/>
+    <TaskItem v-for="task in tasks" :key="task.id" :task="task" @removeTask="$emit('removeTask', task)"/>
   </ul>
   <span v-else class="task-list__empty">Задач нет!</span>
 </template>
